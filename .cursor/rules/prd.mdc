@@ -11,3 +11,4 @@ alwaysApply: true
 - Do not add a reasoner, a solver, a knowledge formalism, a language model, or dependencies until an issue asks for them.
 - Knowledge is the source of truth. Every answer carries a derivation a person can follow by hand. "Unknown" is a valid answer; guessing is not.
 - Inviolable rules cannot be overridden by any fact, rule, or model output.
+- Work flows through issues: `decision` issues produce an ADR a human merges; `auto-dev` issues produce tests plus code the loop merges. See [AGENTS.md](../../AGENTS.md) and [docs/ROADMAP.md](../../docs/ROADMAP.md).
