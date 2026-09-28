@@ -1,0 +1,13 @@
+---
+description: Neeti product decisions live in the PRD
+alwaysApply: true
+---
+
+# Neeti PRD
+
+[docs/PRD.md](../../docs/PRD.md) is the source of truth for what Neeti is.
+
+- Read it before proposing or writing implementation.
+- Do not add a reasoner, a solver, a knowledge formalism, a language model, or dependencies until an issue asks for them.
+- Knowledge is the source of truth. Every answer carries a derivation a person can follow by hand. "Unknown" is a valid answer; guessing is not.
+- Inviolable rules cannot be overridden by any fact, rule, or model output.
