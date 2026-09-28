@@ -56,6 +56,7 @@ Decisions already made:
 - "Unknown" is a valid answer. Guessing is not.
 - Inviolable rules cannot be overridden by any fact, any rule, or any model output.
 - Each fact names its source.
+- Neeti is written in Python 3.12+, managed by `uv`, tested with `pytest` (`uv run pytest`), formatted and linted with `ruff`, type-checked with `mypy --strict`, and checked in one GitHub Actions workflow on every pull request ([ADR-0001](decisions/0001-language-and-toolchain.md)).
 
 Decisions not made yet, and not to be invented in code until a later issue chooses them:
 
