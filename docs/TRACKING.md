@@ -19,6 +19,18 @@ comes from, and a README link to it. Docs only: no test file. Each rule names
 the issue whose tests will enforce it (#5, #6, #7, #9); those links get filled
 in as the modules land.
 
+### CI: check every relative link and anchor in the docs ([#21](https://github.com/naveenreddyalka/neeti/issues/21))
+
+<!-- tracking:#21 -->
+
+**Status:** merged 2026-09-29. Added
+[.github/workflows/docs.yml](../.github/workflows/docs.yml), which runs
+`lychee --offline --include-fragments` over `README.md`, `AGENTS.md`,
+`.cursor/rules/*.mdc`, and `docs/**/*.md` on every pull request and on push
+to `main`. External URLs are never fetched. Test: the `docs` workflow itself;
+a broken relative link or missing `#anchor` fails it and prints the file,
+line, and target. All existing links passed; none needed fixing.
+
 <!-- tracking-append: add the next ### section above ## How to update; on conflict keep both -->
 
 ## How to update
