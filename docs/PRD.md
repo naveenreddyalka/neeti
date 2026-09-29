@@ -56,11 +56,11 @@ Decisions already made:
 - "Unknown" is a valid answer. Guessing is not.
 - Inviolable rules cannot be overridden by any fact, any rule, or any model output.
 - Each fact names its source.
-- The formalism is a Datalog fragment: ground facts, explicitly negated facts, Horn rules without default negation or function symbols, and integrity constraints for the inviolable rules ([ADR-0002](decisions/0002-formalism-and-solver.md)).
-- The solver is a purpose-built forward chainer that records a justification for every derived fact; no external reasoner is a runtime dependency ([ADR-0002](decisions/0002-formalism-and-solver.md)).
 
 Decisions not made yet, and not to be invented in code until a later issue chooses them:
 
+- The formalism: answer set programming, Datalog, a description logic, or something else. First candidate to try: a Datalog fragment ([ADR-0002](decisions/0002-formalism-and-solver.md)).
+- The solver or engine. First candidate to try: a purpose-built forward chainer that records justifications ([ADR-0002](decisions/0002-formalism-and-solver.md)).
 - Where facts come from, and how a source is vetted before its facts enter the store.
 - How a contradiction between two sources is resolved.
 - Which rules are in the inviolable set, and who decides.
