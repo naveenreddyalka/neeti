@@ -56,6 +56,7 @@ Decisions already made:
 - "Unknown" is a valid answer. Guessing is not.
 - Inviolable rules cannot be overridden by any fact, any rule, or any model output.
 - Each fact names its source.
+- The first knowledge slice is menu allergen safety for a small fictional canteen, with allergen classes sourced from Regulation (EU) No 1169/2011 Annex II. The initial inviolable set is two rules: a dish that contains an allergen class a guest has declared is never served to that guest, and missing information is never treated as the absence of an allergen. The repository owner decides the set: an agent proposes in an ADR, the owner accepts by merging, and any change is a new ADR (ADR-0003).
 
 Decisions not made yet, and not to be invented in code until a later issue chooses them:
 
@@ -63,7 +64,6 @@ Decisions not made yet, and not to be invented in code until a later issue choos
 - The solver or engine.
 - Where facts come from, and how a source is vetted before its facts enter the store.
 - How a contradiction between two sources is resolved.
-- Which rules are in the inviolable set, and who decides.
 - Which language model, if any, sits at the edge, and how its output is checked.
 - How the store is versioned and how a change is attributed.
 
